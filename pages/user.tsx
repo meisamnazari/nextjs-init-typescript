@@ -4,7 +4,6 @@ import {connect} from "react-redux";
 
 class User extends Component<any, any> {
     render() {
-        console.log(this.props.user)
         return (
             <div style={{backgroundColor:'red'}}>
                 Gajinooooooooooooooooooooooooooo

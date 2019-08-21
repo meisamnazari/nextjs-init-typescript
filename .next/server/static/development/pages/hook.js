@@ -88,7 +88,7 @@ module.exports =
 /******/
 /******/
 /******/ 	// Load entry module and return exports
-/******/ 	return __webpack_require__(__webpack_require__.s = 5);
+/******/ 	return __webpack_require__(__webpack_require__.s = 6);
 /******/ })
 /************************************************************************/
 /******/ ({
@@ -254,9 +254,9 @@ function _objectSpread(target) {
 
 /***/ }),
 
-/***/ "./pages/user.tsx":
+/***/ "./pages/hook.tsx":
 /*!************************!*\
-  !*** ./pages/user.tsx ***!
+  !*** ./pages/hook.tsx ***!
   \************************/
 /*! exports provided: default */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
@@ -268,34 +268,25 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _src_components_reduxHOC__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../src/components/reduxHOC */ "./src/components/reduxHOC.tsx");
 /* harmony import */ var react_redux__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! react-redux */ "react-redux");
 /* harmony import */ var react_redux__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(react_redux__WEBPACK_IMPORTED_MODULE_2__);
-var _jsxFileName = "D:\\next-project\\pages\\user.tsx";
+var _jsxFileName = "D:\\next-project\\pages\\hook.tsx";
 
 
 
 
-class User extends react__WEBPACK_IMPORTED_MODULE_0__["Component"] {
-  render() {
-    return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-      style: {
-        backgroundColor: 'red'
-      },
-      __source: {
-        fileName: _jsxFileName,
-        lineNumber: 8
-      },
-      __self: this
-    }, "Gajinooooooooooooooooooooooooooo");
-  }
-
-}
-
-const mapStateToProps = state => {
-  return {
-    user: state.user.user
-  };
+const Hook = () => {
+  const [count] = Object(react__WEBPACK_IMPORTED_MODULE_0__["useState"])(0);
+  const user = Object(react_redux__WEBPACK_IMPORTED_MODULE_2__["useSelector"])(state => state.user);
+  console.log('user', user);
+  return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 15
+    },
+    __self: undefined
+  }, count);
 };
 
-/* harmony default export */ __webpack_exports__["default"] = (Object(_src_components_reduxHOC__WEBPACK_IMPORTED_MODULE_1__["default"])(Object(react_redux__WEBPACK_IMPORTED_MODULE_2__["connect"])(mapStateToProps)(User)));
+/* harmony default export */ __webpack_exports__["default"] = (Object(_src_components_reduxHOC__WEBPACK_IMPORTED_MODULE_1__["default"])(Hook));
 
 /***/ }),
 
@@ -418,14 +409,14 @@ const Initial_State = {
 
 /***/ }),
 
-/***/ 5:
+/***/ 6:
 /*!******************************!*\
-  !*** multi ./pages/user.tsx ***!
+  !*** multi ./pages/hook.tsx ***!
   \******************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-module.exports = __webpack_require__(/*! D:\next-project\pages\user.tsx */"./pages/user.tsx");
+module.exports = __webpack_require__(/*! D:\next-project\pages\hook.tsx */"./pages/hook.tsx");
 
 
 /***/ }),
@@ -530,4 +521,4 @@ module.exports = require("redux-thunk");
 /***/ })
 
 /******/ });
-//# sourceMappingURL=user.js.map
+//# sourceMappingURL=hook.js.map
