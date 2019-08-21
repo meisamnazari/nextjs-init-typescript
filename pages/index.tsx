@@ -1,10 +1,13 @@
-import React from 'react';
-export default class extends React.Component {
+import React, {Component} from 'react';
+
+class Index extends Component {
     render() {
         return (
             <div>
-                Hello Next.js
+                Index
             </div>
-        )
+        );
     }
 }
+
+export default Index;

@@ -1,0 +1,1 @@
+{"ast":null,"code":"export const CHANGE_USER = 'CHANGE_USER';","map":{"version":3,"sources":["D:\\next-project\\src\\actions\\types.js"],"names":["CHANGE_USER"],"mappings":"AAAA,OAAO,MAAMA,WAAW,GAAC,aAAlB","sourcesContent":["export const CHANGE_USER='CHANGE_USER';"]},"metadata":{},"sourceType":"module"}
