@@ -3,7 +3,7 @@ import {
 }
 from './types';
 
-export const chaneUser=()=>{
+export const changeUser=()=>{
     return (dispatch)=>{
         dispatch({
             type:CHANGE_USER

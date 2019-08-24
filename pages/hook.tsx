@@ -1,6 +1,6 @@
 import React, {useState} from 'react';
 import ReduxHOC from "../src/components/reduxHOC";
-import { useSelector } from 'react-redux'
+import { useSelector,useDispatch } from 'react-redux'
 
 const Hook = () => {
     const [count] = useState(0);
@@ -8,11 +8,15 @@ const Hook = () => {
     const user = useSelector(
         state => state.user
     );
+
+    const dispatch=useDispatch();
     console.log('user', user);
 
 
     return (
-        <div>
+        <div onClick={
+            ()=> dispatch({type:"CHANGE_USER"})
+        }>
             {count}
         </div>
     );

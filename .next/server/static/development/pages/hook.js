@@ -88,7 +88,7 @@ module.exports =
 /******/
 /******/
 /******/ 	// Load entry module and return exports
-/******/ 	return __webpack_require__(__webpack_require__.s = 6);
+/******/ 	return __webpack_require__(__webpack_require__.s = 4);
 /******/ })
 /************************************************************************/
 /******/ ({
@@ -276,11 +276,15 @@ var _jsxFileName = "D:\\next-project\\pages\\hook.tsx";
 const Hook = () => {
   const [count] = Object(react__WEBPACK_IMPORTED_MODULE_0__["useState"])(0);
   const user = Object(react_redux__WEBPACK_IMPORTED_MODULE_2__["useSelector"])(state => state.user);
+  const dispatch = Object(react_redux__WEBPACK_IMPORTED_MODULE_2__["useDispatch"])();
   console.log('user', user);
   return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+    onClick: () => dispatch({
+      type: "CHANGE_USER"
+    }),
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 15
+      lineNumber: 17
     },
     __self: undefined
   }, count);
@@ -409,7 +413,7 @@ const Initial_State = {
 
 /***/ }),
 
-/***/ 6:
+/***/ 4:
 /*!******************************!*\
   !*** multi ./pages/hook.tsx ***!
   \******************************/

@@ -6211,11 +6211,17 @@ var Hook = function Hook() {
   var user = Object(react_redux__WEBPACK_IMPORTED_MODULE_3__["useSelector"])(function (state) {
     return state.user;
   });
+  var dispatch = Object(react_redux__WEBPACK_IMPORTED_MODULE_3__["useDispatch"])();
   console.log('user', user);
   return react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("div", {
+    onClick: function onClick() {
+      return dispatch({
+        type: "CHANGE_USER"
+      });
+    },
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 15
+      lineNumber: 17
     },
     __self: this
   }, count);
@@ -6367,7 +6373,7 @@ var Initial_State = {
 
 /***/ }),
 
-/***/ 3:
+/***/ 1:
 /*!***********************************************************************************************************!*\
   !*** multi next-client-pages-loader?page=%2Fhook&absolutePagePath=D%3A%5Cnext-project%5Cpages%5Chook.tsx ***!
   \***********************************************************************************************************/
@@ -6390,5 +6396,5 @@ module.exports = dll_01f9a3fa864a7b7414d8;
 
 /***/ })
 
-},[[3,"static/runtime/webpack.js"]]]);
+},[[1,"static/runtime/webpack.js"]]]);
 //# sourceMappingURL=hook.js.map
